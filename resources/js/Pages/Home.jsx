@@ -186,12 +186,13 @@ export default function Index({all_posts,auth, suggested_users}) {
                     {users.map((user) => {
                         return (
                             <div key={user.id} className="flex items-center my-4">
-                            <button onClick={() => goShow(user.id)}>
+                            <button onClick={() => goShow(user.id)} className="flex items-center">
                             {user.avatar ? (
-                                <img src={`storage/images/${user.avatar}`} alt={user.name} className="h-[10px] rounded-full mx-auto me-2"></img>
+                                <img src={`storage/images/${user.avatar}`} alt={user.name} className="inline h-[20px] rounded-full mx-auto me-2"></img>
                             ) : (
-                                <i className="fa-solid fa-circle-user text-secondary mx-2"></i>
+                                <i className="fa-solid fa-circle-user text-secondary mx-2 text-2xl"></i>
                             )}
+
                             <p className="me-3 inline">{user.name}</p>
                             </button>
                             <button 
